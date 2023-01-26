@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/headers")
 class HeaderController{
 
-    @GetMapping("/")
+    @GetMapping("")
     public String getHeaders(@RequestHeader HttpHeaders headers){
         return headers.getHost().getHostName() + " " + headers.getHost().getPort();
     }
